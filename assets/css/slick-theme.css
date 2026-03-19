@@ -1,0 +1,130 @@
+/**
+ * Slick Carousel Button Styling
+ * Styles Squarespace custom navigation buttons for carousels
+ * Uses minimalist arrow-only design matching live site
+ */
+
+/* Hide carousel header text (e.g., "Featured") */
+.summary-block-header .summary-header-text {
+  display: none;
+}
+
+/* Squarespace custom carousel buttons */
+.summary-carousel-pager-prev,
+.summary-carousel-pager-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  width: auto;
+  height: auto;
+  padding: 10px;
+  border: none;
+  background: transparent;
+  color: #666;
+  cursor: pointer;
+  font-size: 24px;
+  line-height: 1;
+  transition: color 0.2s ease, opacity 0.2s ease;
+  opacity: 0.7;
+}
+
+.summary-carousel-pager-prev:hover,
+.summary-carousel-pager-next:hover {
+  color: #333;
+  opacity: 1;
+}
+
+/* Arrow content */
+.summary-carousel-pager-prev:before,
+.summary-carousel-pager-next:before {
+  font-family: Arial, sans-serif;
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+}
+
+.summary-carousel-pager-prev {
+  left: 20px;
+}
+
+.summary-carousel-pager-next {
+  right: 20px;
+}
+
+.summary-carousel-pager-prev:before {
+  content: '←';
+}
+
+.summary-carousel-pager-next:before {
+  content: '→';
+}
+
+/* Hide buttons when disabled */
+.summary-carousel-pager-prev.slick-disabled,
+.summary-carousel-pager-next.slick-disabled {
+  opacity: 0.25;
+  cursor: default;
+}
+
+/* For carousels inside specific containers, adjust positioning */
+.summary-block-wrapper .summary-carousel-pager-prev {
+  left: 10px;
+}
+
+.summary-block-wrapper .summary-carousel-pager-next {
+  right: 10px;
+}
+
+/* Fallback for Slick-generated buttons (if custom buttons aren't found) */
+.slick-prev,
+.slick-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  width: auto;
+  height: auto;
+  padding: 10px;
+  border: none;
+  background: transparent;
+  color: #666;
+  cursor: pointer;
+  font-size: 0;
+  line-height: 0;
+  transition: color 0.2s ease, opacity 0.2s ease;
+  opacity: 0.7;
+}
+
+.slick-prev:hover,
+.slick-next:hover {
+  color: #333;
+  opacity: 1;
+}
+
+.slick-prev:before,
+.slick-next:before {
+  font-family: Arial, sans-serif;
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 1;
+  color: #666;
+  -webkit-font-smoothing: antialiased;
+}
+
+.slick-prev {
+  left: 20px;
+}
+
+.slick-next {
+  right: 20px;
+}
+
+.slick-prev:before {
+  content: '←';
+}
+
+.slick-next:before {
+  content: '→';
+}
